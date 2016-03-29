@@ -23,11 +23,11 @@ def test():
 @app.route('/callback/', methods=['POST'])
 def groupme_callback():
 	json_body = request.get_json()
-	if json_body['group_id'] == os.environ['GROUP_ID']:
+	if json_body['group_id'] == os.environ['GROUP_ID'] and json_body['sender_type'] != 'bot':
 		# some degree of verification that it is sent via a groupme callback
 		# could also check for "User-Agent: GroupMeBotNotifier/1.0", but that's plenty spoofable
 
-		if 'trash' in json_body['text']:
+		if 'trash' in json_body['text'].lower():
 			payload = {
 				'bot_id' : os.environ['BOT_ID'],
 				'text'   : random.choice(quotes),
