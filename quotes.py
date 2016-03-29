@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 quotes = [
 	'It’s the trash, isn’t it?\nIt’s the sweet, sweet trash.',
 	'Those people are going to trash that house. We won’t be able to get a dime for it.',
