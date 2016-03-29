@@ -10,10 +10,11 @@ app = Flask(__name__)
 def hello():
 	return 'Hello world!'
 
-@app.route('/'):
+@app.route('/')
 def trash():
-	return(random.choose(quotes))
+	return(random.choice(quotes))
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
+	# app.run(host='0.0.0.0', port=port, debug=True)
 	app.run(host='0.0.0.0', port=port)
