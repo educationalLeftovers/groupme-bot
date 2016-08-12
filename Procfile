@@ -1,2 +1,2 @@
-web: python trashman.py
+web: python bot.py
 
