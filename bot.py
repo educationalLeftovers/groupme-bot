@@ -4,9 +4,7 @@ from flask import Flask, json, request
 import requests
 
 
-from quotes import quotes
-
-app = Flask(__name__)
+		app = Flask(__name__)
 
 def reply(message):
 	payload = {
